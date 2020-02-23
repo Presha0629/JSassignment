@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Random element from an array.</title>
+    </head>
+    <body>
+        <script>
+            let num = prompt("Enter the number of elements you want in an array:");
+            let elements = [];
+
+            for(let i = 0 ; i < num ; i++){
+                elements[i] = prompt("Enter the element:");
+            }
+
+            Array.prototype.random = function () {
+                return this[Math.floor((Math.random()*this.length))];
+            }
+            alert(`Random element is ${elements.random()}`);
+            // get_random = function (elements) {
+            //     return elements[Math.floor((Math.random()*elements.length))];
+            // }
+            // // let rand = get_random(elements); 
+            // alert(`Random element is ${get_random(elements)}`);
+        </script>
+    </body>
+</html>

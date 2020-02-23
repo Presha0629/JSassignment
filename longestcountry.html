@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Longest country.</title>
+  </head>
+  <body>
+    <script>
+      let countries = [];
+      let n = prompt("How many countries do you want in the array?");
+      let longest;
+
+      for(let i = 0 ; i < n ; i++){
+        countries[i] = prompt("Enter the name of country?");
+      }
+      // alert(`${countries.length}`);
+      
+      // alert(`${countries[2]}`);
+      // alert(`${countries[2].length}`);
+
+      for(let i = 0 ; i < n ; i++){
+        for(let j = i + 1 ; j < n ; j++){
+          if(countries[i].length >= countries[j].length){
+            longest = countries[i];
+          }else{
+            longest = countries[j];
+          }
+        }
+      }
+      alert(`The longest country name is ${longest}`);
+    </script>  
+  </body>
+</html>
